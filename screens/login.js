@@ -5,8 +5,13 @@ import { View, TextInput, Text, Image, TouchableOpacity, ImageBackground, } from
 
 export default function Login({navigation}){
     return (
-        <ImageBackground blurRadius={10} source={{uri: "https://images.unsplash.com/photo-1610230099906-7ad016cf5cf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXBwbGUlMjB3YXRjaHxlbnwwfDF8MHxibGFja3w%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}
+        <ImageBackground blurRadius={10} source={{uri: "https://images.unsplash.com/photo-1631863552122-3072cf599a46?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGFwcGxlJTIwd2F0Y2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}}
             style={{flex:1}}>
+                <View style={{color: 'white',marginTop:"7%"}}>
+                    <TouchableOpacity onPress={() => {navigation.navigate ('Signup');}}>
+                <Text style={{color: 'black',marginLeft:"79%", fontWeight:'bold',fontSize:18,}}> Sign Up</Text>
+                </TouchableOpacity>
+                </View>
             <View style={{justifyContent: "center", alignItems: "center",paddingTop:100}}>
     
                 <Image 
@@ -18,11 +23,11 @@ export default function Login({navigation}){
                     }}
                     source={{uri: "https://images.unsplash.com/photo-1590688560938-57c514814ddb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXBwbGUlMjB3YXRjaHxlbnwwfDF8MHxibGFja3w%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}} />
                 <Text style={{color: "grey", fontSize: 30, fontWeight: '600'}}> Apple Watch</Text>
-                <Text style={{color: "rgba(0,0,0,0.7)", fontSize: 20, fontWeight: '400', fontStyle: 'italic'}}>Hermes</Text>
+                <Text style={{color: "rgba(0,0,0,0.7)", fontSize: 20, fontWeight: '600', fontStyle: 'italic'}}>Hermes</Text>
                 
             </View>
             <View>
-                <Text style={{textAlign: 'center', fontSize: 20, fontWeight: '400', color: 'white'}}>Email</Text>
+                <Text style={{textAlign: 'center', fontSize: 20, fontWeight: '400', color: 'black'}}>Email</Text>
             
     <TextInput placeholder='eg. Philip21@gmail.com' style={{padding: 10, fontSize: 20, borderWidth:1, backgroundColor: 'white', alignSelf:'center',borderRadius: 20, width: 350}}/>
    

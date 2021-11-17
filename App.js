@@ -6,18 +6,23 @@ import {createStackNavigator}from '@react-navigation/stack'
 import Login from './screens/login';
 import Home from './screens/home';
 import Signup from './screens/signup';
+import Cart  from './screens/cart';
+import ProdDetails from './screens/productdet';
 
 
 export default function App() {
-  const MainNavigator = createStackNavigator();
+  const Stack = createStackNavigator();
   return (
     <View style={{flex: 1}}>
   <NavigationContainer>
-    <MainNavigator.Navigator screenOptions = {{headerShown: false}}> 
-    <MainNavigator.Screen name="Login" component={Login}/> 
-    <MainNavigator.Screen name="Home" component={Home}/> 
-    <MainNavigator.Screen name="Signup" component={Signup}/> 
-    </MainNavigator.Navigator> 
+    <Stack.Navigator screenOptions = {{headerShown: false}}> 
+    <Stack.Screen name="Login" component={Login}/> 
+    <Stack.Screen name="Home" component={Home}/> 
+    <Stack.Screen name="Signup" component={Signup}/> 
+    <Stack.Screen name="Cart" component={Cart}/>
+    <Stack.Screen name="ProdDetails" component={ProdDetails}/>
+
+    </Stack.Navigator> 
   </NavigationContainer>
     </View>
   );
