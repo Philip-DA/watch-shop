@@ -8,7 +8,7 @@ import Home from './screens/home';
 import Signup from './screens/signup';
 import Cart  from './screens/cart';
 import ProdDetails from './screens/productdet';
-
+import Welcome from './screens/welcome';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -16,11 +16,13 @@ export default function App() {
     <View style={{flex: 1}}>
   <NavigationContainer>
     <Stack.Navigator screenOptions = {{headerShown: false}}> 
+    <Stack.Screen name="Welcome" component={Welcome}/>
     <Stack.Screen name="Login" component={Login}/> 
     <Stack.Screen name="Home" component={Home}/> 
     <Stack.Screen name="Signup" component={Signup}/> 
     <Stack.Screen name="Cart" component={Cart}/>
     <Stack.Screen name="ProdDetails" component={ProdDetails}/>
+    
 
     </Stack.Navigator> 
   </NavigationContainer>
